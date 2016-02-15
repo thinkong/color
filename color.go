@@ -345,9 +345,9 @@ func Cyan(format string, a ...interface{}) { printColor(format, FgCyan, a...) }
 func White(format string, a ...interface{}) { printColor(format, FgWhite, a...) }
 
 func printColor(format string, p Attribute, a ...interface{}) {
-	if !strings.HasSuffix(format, "\n") {
-		format += "\n"
-	}
+//	if !strings.HasSuffix(format, "\n") {
+//		format += "\n"
+//	}
 
 	c := &Color{params: []Attribute{p}}
 	c.Printf(format, a...)
